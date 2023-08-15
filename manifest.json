@@ -1,0 +1,25 @@
+{
+    "manifestVersion": "1",
+    "type": "custom.demo-requests",
+    "name": "Demo Requests",
+    "description": "A custom Impartner user interface to list, create and edit Demo Request custom objects.",
+    "version": "0.0.0",
+    "author": "Impartner Software",
+    "localization": {
+      "en": {
+        "name": "Demo Requests",
+        "description": "A custom Impartner user interface to list, create and edit Demo Request custom objects."
+      },
+      "es": {
+        "name": "Solicitudes de demostración",
+        "description": " Una interfaz de usuario Impartner personalizada para enumerar, crear y editar objetos personalizados de solicitud de demostración."
+      }
+    },
+    "isActive": true,
+    "availableIn": ["Portal"],
+    "style": "BS5",
+    "urlSegment": "demo-requests",
+    "tagId": "um-demo-requests",
+    "sourceUrl": "demo-requests.min.js"
+  }
+  

@@ -1,0 +1,109 @@
+<div class="list-container">
+  <impdc-alert
+    *ngFor="let alert of pageAlerts"
+    [theme]="alert.theme"
+    [show]="true"
+    [headingText]="alert.headingText"
+  >
+  </impdc-alert>
+  <div class="heading">
+    <h2>{{ "list.title" | i18next }}</h2>
+    <button
+      impdcButton
+      branded
+      type="button"
+      theme="primary"
+      [text]="'list.addNew' | i18next"
+      [routerLink]="['/add-or-update']"
+    ></button>
+  </div>
+  <div class="data-loading" *ngIf="loading">
+    <impdc-spinner></impdc-spinner>
+  </div>
+  <div [formGroup]="form" *ngIf="!loading">
+    <input
+      impdcInput
+      formControlName="searchText"
+      [placeholder]="'list.search' | i18next"
+    />
+  </div>
+  <div *ngIf="!loading">
+    <table impdcTable>
+      <tr>
+        <th>
+          {{ "fields.id" | i18next }}
+          <app-column-sort
+            column="id"
+            [field]="sortField"
+            [direction]="sortDirection"
+            [total]="totalResults"
+            (sorted)="updateSort($event)"
+          ></app-column-sort>
+        </th>
+        <th>
+          {{ "fields.name" | i18next }}
+          <app-column-sort
+            column="name"
+            [field]="sortField"
+            [direction]="sortDirection"
+            [total]="totalResults"
+            (sorted)="updateSort($event)"
+          ></app-column-sort>
+        </th>
+        <th>
+          {{ "fields.products__cf" | i18next }}
+          <app-column-sort
+            column="products__cf"
+            [field]="sortField"
+            [direction]="sortDirection"
+            [total]="totalResults"
+            (sorted)="updateSort($event)"
+          ></app-column-sort>
+        </th>
+        <th>
+          {{ "fields.demo_Date__cf" | i18next }}
+          <app-column-sort
+            column="demo_Date__cf"
+            [field]="sortField"
+            [direction]="sortDirection"
+            [total]="totalResults"
+            (sorted)="updateSort($event)"
+          ></app-column-sort>
+        </th>
+        <th>
+          {{ "fields.description__cf" | i18next }}
+          <app-column-sort
+            column="description__cf"
+            [field]="sortField"
+            [direction]="sortDirection"
+            [total]="totalResults"
+            (sorted)="updateSort($event)"
+          ></app-column-sort>
+        </th>
+      </tr>
+      <tr
+        *ngFor="let demoRequest of demoRequests"
+        [routerLink]="['/add-or-update']"
+        [queryParams]="{ id: demoRequest.id }"
+      >
+        <td>{{ demoRequest.id }}</td>
+        <td>{{ demoRequest.name }}</td>
+        <td>{{ demoRequest.products__cf }}</td>
+        <td>{{ demoRequest.demo_Date__cf | date }}</td>
+        <td>{{ demoRequest.description__cf }}</td>
+      </tr>
+      <tr>
+        <td colspan="5">
+          <div
+            impdc-pagination
+            [page]="resultsPage"
+            [perPage]="resultsPerPage"
+            [total]="totalResults"
+            [summary]="'list.paginationSummary' | i18next"
+            (goToPage)="changePage($event)"
+          ></div>
+        </td>
+      </tr>
+    </table>
+  </div>
+</div>

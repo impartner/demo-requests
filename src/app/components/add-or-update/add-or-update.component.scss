@@ -1,0 +1,42 @@
+.add-or-update-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    .heading {
+        display: flex;
+        flex-direction: row;
+        gap: 20px;
+        justify-content: space-between;
+        padding-bottom: 20px;
+    
+        .cta-button {
+            align-self: flex-end;
+        }
+    }
+
+    .data-loading {
+        display: flex;
+        justify-content: center;
+    }
+        
+    .fields {
+        display: grid;
+        grid-template-columns: 100%;
+        row-gap: 20px;
+    }
+
+    @media (min-width: 768px)  {
+        .fields {
+            display: grid;
+            grid-template-columns: 49% 49%;
+            column-gap: 2%;
+        }
+    }
+    
+    .add-or-update-buttons {
+        display: flex;
+        flex-direction: row;
+        gap: 10px;
+    }
+}

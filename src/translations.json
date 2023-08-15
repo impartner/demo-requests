@@ -1,0 +1,247 @@
+{
+  "en": {
+    "demoRequests": {
+      "list": {
+        "title": "Demo Requests",
+        "search": "Search",
+        "addNew": "Add New",
+        "paginationSummary": "Showing {firstPageResult} to {lastPageResult} of {total} results"
+      },
+      "add": {
+        "title": "Add Demo Request",
+        "button": "Add",
+        "error": "Unable to create demo request."
+      },
+      "update": {
+        "getError": "Unable to get demo request",
+        "title": "Update Demo Request",
+        "button": "Update",
+        "error": "Unable to update demo request."
+      },
+      "addOrUpdate": {
+        "required": "Required",
+        "submissionError": "Unable to save demo request.",
+        "successfulUpsert": "Successfully saved demo request.",
+        "backToList": "Back to list",
+        "cancel": "Cancel"
+      },
+      "fields": {
+        "id": "Id",
+        "name": "Name",
+        "products__cf": "Products",
+        "demo_Date__cf": "Demo Date",
+        "description__cf": "Description"
+      }
+    }
+  },
+  "es": {
+    "demoRequests": {
+      "list": {
+        "title": "Solicitudes de demostración",
+        "search": "Buscar",
+        "addNew": "Agregar nuevo",
+        "paginationSummary": "Mostrando {firstPageResult} a {lastPageResult} de {total} resultados"
+      },
+      "add": {
+        "title": "Añadir solicitud de demostración",
+        "button": "Agregar",
+        "error": "No se pudo crear la solicitud de demostración."
+      },
+      "update": {
+        "getError": "No se puede obtener la solicitud de demostración",
+        "title": "Solicitud de actualización de demostración",
+        "button": "Actualizar",
+        "error": "No se pudo actualizar la solicitud de demostración."
+      },
+      "addOrUpdate": {
+        "required": "Requerido",
+        "submissionError": "No se pudo guardar la solicitud de demostración",
+        "successfulUpsert": "Solicitud de demostración guardada con éxito.",
+        "backToList": "Volver a la lista",
+        "cancel": "Cancelar"
+      },
+      "fields": {
+        "id": "Id",
+        "name": "Nombre",
+        "products__cf": "Productos",
+        "demo_Date__cf": "Fecha de demostración",
+        "description__cf": "Descripción"
+      }
+    }
+  },
+  "pt": {
+    "demoRequests": {
+      "list": {
+        "title": "Solicitações de Demonstração",
+        "search": "Pesquisar",
+        "addNew": "Adicionar novo",
+        "paginationSummary": "Mostrando {firstPageResult} a {lastPageResult} de {total} resultados"
+      },
+      "add": {
+        "title": "Adicionar solicitação de demonstração",
+        "button": "Adicionar",
+        "error": "Não foi possível criar solicitação de demonstração."
+      },
+      "update": {
+        "getError": "Não foi possível obter solicitação de demonstração",
+        "title": "Atualizar solicitação de demonstração",
+        "button": "Atualizar",
+        "error": "Não foi possível atualizar a solicitação de demonstração."
+      },
+      "addOrUpdate": {
+        "id": "Identificador",
+        "name": "nome",
+        "products__cf": "Produtos",
+        "demo_Date__cf": "Data da Demonstração",
+        "description__cf": "Descrição"
+      },
+      "fields": {
+        "id": "Id",
+        "name": "Name",
+        "products__cf": "Products",
+        "demo_Date__cf": "Demo Date",
+        "description__cf": "Description"
+      }
+    }
+  },
+  "de": {
+    "demoRequests": {
+      "list": {
+        "title": "Demo-Anfragen",
+        "search": "Suche",
+        "addNew": "Neu hinzufügen",
+        "paginationSummary": "Zeigt {firstPageResult} bis {lastPageResult} von {total} Ergebnissen."
+      },
+      "add": {
+        "title": "Demo-Anfrage hinzufügen",
+        "button": "Hinzufügen",
+        "error": "Demo-Anfrage konnte nicht erstellt werden."
+      },
+      "update": {
+        "getError": "Demo-Anfrage konnte nicht abgerufen werden",
+        "title": "Demo-Anfrage aktualisieren",
+        "button": "Aktualisieren",
+        "error": "Demo-Anfrage konnte nicht aktualisiert werden."
+      },
+      "addOrUpdate": {
+        "required": "Erforderlich",
+        "submissionError": "Demoanfrage konnte nicht gespeichert werden.",
+        "successfulUpsert": "Demo-Anfrage erfolgreich gespeichert.",
+        "backToList": "Zurück zur Liste",
+        "cancel": "Abbrechen"
+      },
+      "fields": {
+        "id": "Identifikator",
+        "name": "Name",
+        "products__cf": "Produkte",
+        "demo_Date__cf": "Demo-Datum",
+        "description__cf": "Beschreibung"
+      }
+    }
+  },
+  "fr": {
+    "demoRequests": {
+      "list": {
+        "title": "Demandes de démonstration",
+        "search": "Chercher",
+        "addNew": "Ajouter nouveau",
+        "paginationSummary": "Affichage de {firstPageResult} à {lastPageResult} sur {total} résultats"
+      },
+      "add": {
+        "title": "Ajouter une demande de démo",
+        "button": "Ajouter",
+        "error": "Impossible de créer une demande de démonstration."
+      },
+      "update": {
+        "getError": "Impossible d'obtenir la demande de démonstration",
+        "title": "Mettre à jour la demande de démo",
+        "button": "Mettre à jour",
+        "error": "Impossible de mettre à jour la demande de démonstration."
+      },
+      "addOrUpdate": {
+        "required": "Requis",
+        "submissionError": "Impossible d'enregistrer la demande de démonstration.",
+        "successfulUpsert": "Demande de démonstration enregistrée avec succès.",
+        "backToList": "Retour à la liste",
+        "cancel": "Annuler"
+      },
+      "fields": {
+        "id": "Id",
+        "name": "nom",
+        "products__cf": "Produits",
+        "demo_Date__cf": "Date de la démo",
+        "description__cf": "Description"
+      }
+    }
+  },
+  "zh-CN": {
+    "demoRequests": {
+      "list": {
+        "title": "演示请求",
+        "search": "搜索",
+        "addNew": "添加新的",
+        "paginationSummary": "显示 {firstPageResult} 到 {lastPageResult}，共 {total} 个结果"
+      },
+      "add": {
+        "title": "添加演示请求",
+        "button": "添加",
+        "error": "无法创建演示请求。"
+      },
+      "update": {
+        "getError": "无法获取演示请求",
+        "title": "更新演示请求",
+        "button": "更新",
+        "error": "无法更新演示请求。"
+      },
+      "addOrUpdate": {
+        "required": "必填",
+        "submissionError": "无法保存演示请求。",
+        "successfulUpsert": "成功保存演示请求。",
+        "backToList": "返回列表",
+        "cancel": "取消"
+      },
+      "fields": {
+        "id": "身份证号",
+        "name": "姓名",
+        "products__cf": "产品",
+        "demo_Date__cf": "演示日期",
+        "description__cf": "描述"
+      }
+    }
+  },
+  "ja": {
+    "demoRequests": {
+      "list": {
+        "title": "デモリクエスト",
+        "search": "検索",
+        "addNew": "新規追加",
+        "paginationsummary": "{total} 件中、{firstPageResult} から {lastPageResult} までの結果を表示しています。"
+      },
+      "add": {
+        "title": "デモリクエストを追加",
+        "button": "追加",
+        "error": "デモ リクエストを作成できません。"
+      },
+      "update": {
+        "getError": "デモリクエストを取得できません",
+        "title": "更新デモのリクエスト",
+        "button": "更新",
+        "error": "デモ リクエストを更新できません。"
+      },
+      "addOrUpdate": {
+        "required": "必須",
+        "submissionError": "デモ リクエストを保存できません。",
+        "successfulUpsert": "デモ リクエストが正常に保存されました。",
+        "backToList": "リストに戻る",
+        "cancel": "キャンセル"
+      },
+      "fields": {
+        "id": "やった",
+        "name": "名前",
+        "products__cf": "製品",
+        "demo_Date__cf": "デモの日付",
+        "description__cf": "説明"
+      }
+    }
+  }
+}

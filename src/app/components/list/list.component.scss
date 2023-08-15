@@ -1,0 +1,30 @@
+.list-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    .data-loading {
+        display: flex;
+        justify-content: center;
+    }
+
+    td {
+        cursor: pointer;
+    }
+
+    tr:hover {
+        background-color: var(--impd-color-gray-100);
+    }
+
+    .heading {
+        display: flex;
+        flex-direction: row;
+        gap: 20px;
+        justify-content: space-between;
+        padding-bottom: 20px;
+    
+        .cta-button {
+            align-self: flex-end;
+        }
+    }
+}

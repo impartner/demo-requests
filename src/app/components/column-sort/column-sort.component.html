@@ -1,0 +1,8 @@
+<a *ngIf="total > 1" class="table-sort" (click)="sort()">
+  <span
+    impdc-icon
+    [name]="
+      column !== field ? 'sort' : direction === 'asc' ? 'sort-up' : 'sort-down'
+    "
+  ></span>
+</a>

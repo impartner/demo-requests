@@ -1,0 +1,136 @@
+<div class="add-or-update-container">
+  <div class="heading">
+    <div>
+      <h2 *ngIf="!isUpdate">{{ "add.title" | i18next }}</h2>
+      <h2 *ngIf="isUpdate">{{ "update.title" | i18next }}</h2>
+    </div>
+    <div class="cta-button">
+      <p>
+        <button
+          impdcButton
+          branded
+          type="button"
+          theme="primary"
+          [text]="'addOrUpdate.backToList' | i18next"
+          [routerLink]="['/list']"
+        ></button>
+      </p>
+    </div>
+  </div>
+  <div class="data-loading" *ngIf="loading">
+    <impdc-spinner></impdc-spinner>
+  </div>
+  <div [formGroup]="form" *ngIf="!loading">
+    <div class="fields">
+      <div *ngIf="isUpdate">
+        <impdc-form-field>
+          <impdc-label>{{ "fields.id" | i18next }}</impdc-label>
+          <input
+            impdcInput
+            [disabled]="true"
+            readonly="true"
+            formControlName="id"
+          />
+        </impdc-form-field>
+      </div>
+      <div>
+        <impdc-form-field>
+          <impdc-label>{{ "fields.name" | i18next }}</impdc-label>
+          <input impdcInput required="true" formControlName="name" />
+          <impdc-error>{{ "addOrUpdate.required" | i18next }}</impdc-error>
+        </impdc-form-field>
+      </div>
+      <div>
+        <impdc-form-field>
+          <impdc-label>{{ "fields.products__cf" | i18next }}</impdc-label>
+          <impdc-select
+            required="true"
+            multiple="true"
+            formControlName="products__cf"
+          >
+            <impdc-select-option
+              *ngFor="let option of productOptions | keyvalue"
+              [value]="option.key"
+              [label]="option.value"
+            ></impdc-select-option>
+          </impdc-select>
+          <impdc-error>{{ "addOrUpdate.required" | i18next }}</impdc-error>
+        </impdc-form-field>
+      </div>
+      <div>
+        <impdc-form-field>
+          <impdc-label>{{ "fields.demo_Date__cf" | i18next }}</impdc-label>
+          <input
+            impdcInput
+            required="true"
+            type="date"
+            formControlName="demo_Date__cf"
+          />
+          <impdc-error>{{ "addOrUpdate.required" | i18next }}</impdc-error>
+        </impdc-form-field>
+      </div>
+      <div>
+        <impdc-form-field>
+          <impdc-label>{{ "fields.description__cf" | i18next }}</impdc-label>
+          <textarea
+            impdcInput
+            required="true"
+            formControlName="description__cf"
+          ></textarea>
+          <impdc-error>{{ "addOrUpdate.required" | i18next }}</impdc-error>
+        </impdc-form-field>
+      </div>
+    </div>
+  </div>
+  <div *ngIf="!loading">
+    <p class="add-or-update-buttons">
+      <button
+        branded
+        *ngIf="!isUpdate"
+        impdcButton
+        type="button"
+        theme="primary"
+        [disabled]="!form.valid"
+        (click)="upsert()"
+        [text]="'add.button' | i18next"
+      ></button>
+      <button
+        branded
+        *ngIf="isUpdate"
+        impdcButton
+        type="button"
+        theme="primary"
+        [disabled]="!form.valid"
+        (click)="upsert()"
+        [text]="'update.button' | i18next"
+      ></button>
+      <button
+        impdcButton
+        type="button"
+        theme="secondary"
+        [routerLink]="['/list']"
+        [text]="'addOrUpdate.cancel' | i18next"
+      ></button>
+    </p>
+  </div>
+  <div *ngIf="errorMessage">
+    <impdc-alert
+      theme="danger"
+      [show]="!!errorMessage"
+      [headingText]="'addOrUpdate.submissionError' | i18next"
+      (dismiss)="handleErrorDismiss()"
+    >
+      <span heading class="icon fas fa-exclamation-triangle"></span>
+      {{ errorMessage }}
+    </impdc-alert>
+  </div>
+  <div *ngIf="successfulUpsert">
+    <impdc-alert
+      theme="success"
+      [show]="!!successfulUpsert"
+      [headingText]="'addOrUpdate.successfulUpsert' | i18next"
+      (dismiss)="handleSuccessfulUpsertDismiss()"
+    >
+    </impdc-alert>
+  </div>
+</div>
